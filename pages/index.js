@@ -1,15 +1,32 @@
 import Layout from './../components/layout'
-import { Steps, Row, Col  } from 'antd';
-const Step = Steps.Step;
-
+import { Row, Col  } from 'antd'
+import AutoComplete from '../containers/autocomplete'
 
 export default () => (
-  <Layout title='About us'>
+  <Layout title='Nextjs Antd Example'>
    <div>
-    <Row>
-      <Col span={12}>col-12</Col>
+   	<h1 style={styles.title}> Nextjs Antd Example </h1>
+    <Row>	
+      <Col span={24}>
+      	<AutoComplete style={styles.autocomplete} />
+      </Col>
     </Row>
   </div>
 
   </Layout>
 )
+
+
+
+const styles = {
+  title: {
+    textAlign: 'center',
+    fontSize: 30,
+    padding: 5
+  },
+  autocomplete: {
+  	display:'block',
+  	width: 300,
+  	margin:'15px auto'
+  }
+}
